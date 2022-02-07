@@ -1,0 +1,14 @@
+.caption {
+    top: 50%;
+transform: translateY(-50%);
+bottom: initial;
+}
+
+
+
+.carousel-title{
+    text-shadow: 1px 1px 2px rgb(82, 82, 82);
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+}

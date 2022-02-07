@@ -1,0 +1,25 @@
+.card-overlay {
+    padding-top: 6rem;
+}
+
+.event-title {
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+
+.event-title {
+    font-weight: bolder;
+}
+
+.event-body{
+    text-align: left;
+}
+
+.card-event{
+    color: white;
+    background-color: rgb(24, 24, 24);
+}
+
+.list-group-flush {
+background-color: rgb(24, 24, 24);
+color: white;
+}
