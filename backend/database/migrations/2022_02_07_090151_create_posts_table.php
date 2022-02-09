@@ -20,6 +20,9 @@ class CreatePostsTable extends Migration
             $table->text('content');
             $table->string('location');
             $table->string('artists');
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }
