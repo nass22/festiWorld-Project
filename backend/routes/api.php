@@ -2,9 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ApiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,14 +35,19 @@ Route::post('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 //All festivals
-Route::get('/festivals', [ApiController::class, 'listAllPosts']);
+Route::get('/festivals', [PostController::class, 'showAllPosts']);
 
 //One festival
-Route::get('/festivals/{id}', [ApiController::class, 'listPost']);
+Route::get('/festivals/{id}', [PostController::class, 'showPost']);
 
 //Search festivals
-Route::post('/festivals/search', [ApiController::class, 'search']);
+Route::post('/festivals/search', [PostController::class, 'search']);
 
+//List all News
+Route::get('/news', [NewsController::class, 'show']);
+
+//Add News
+Route::post('/addnews', [NewsController::class, 'store']);
 
 
 //using middleware

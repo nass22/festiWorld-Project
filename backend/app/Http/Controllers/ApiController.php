@@ -32,9 +32,9 @@ class ApiController extends Controller
         return response()->json($post);
     }
 
-    public function viewSearch(){
-        return view('search');
-    }
+    // public function viewSearch(){
+    //     return view('search');
+    // }
 
     //A modifier
     public function search(Request $request){
