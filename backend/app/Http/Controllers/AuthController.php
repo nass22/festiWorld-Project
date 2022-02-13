@@ -54,6 +54,12 @@ class AuthController extends Controller
     {
         return $request->user();
     }
+
+    //profile user with id return
+    public function profile($id){
+        $profile = User::find($id);
+        return response()->json($profile);
+    }
     
     // this method signs out users by removing tokens
     public function logout(Request $request)
