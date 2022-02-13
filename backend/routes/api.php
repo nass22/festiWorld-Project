@@ -31,11 +31,14 @@ Route::post('/login', [AuthController::class, 'login']);
 //profile user
 Route::post('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
+//profile user id 
+Route::get('/user/{id}', [AuthController::class, 'profile']); //ADD middleware
+
 //logout
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
 //All festivals
-Route::get('/festivals', [PostController::class, 'showAllPosts']);
+Route::get('/festivals', [PostController::class, 'showAllPosts']); 
 
 //One festival
 Route::get('/festivals/{id}', [PostController::class, 'showPost']);

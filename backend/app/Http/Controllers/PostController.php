@@ -63,10 +63,4 @@ class PostController extends Controller
         }
         
     }
-
-    public function profile($id){
-        $profile = User::find($id);
-
-        return response()->json($profile);
-    }
 }
