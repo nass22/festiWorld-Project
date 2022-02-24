@@ -39,7 +39,7 @@ class PostController extends Controller
     //A modifier
     public function search(Request $request){
         $location = $request->input('location');
-        $musicType = $request->input('musictype');
+        $musicType = $request->input('music-type');
 
         if($location->isEmpty() && $musicType->isEmpty()){
 
@@ -63,7 +63,8 @@ class PostController extends Controller
         }
         
     }
-
+    
+    //Récupère une img random
     public function getRandomImg(){
 
         $url = "https://api.unsplash.com/photos/random/?query=musicfestivals&client_id=3Ls0LURZokLtsjEO-tGCasKHlCx4WuFH3mFOaPr5IFA";

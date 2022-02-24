@@ -39,7 +39,7 @@ class ApiController extends Controller
     //A modifier
     public function search(Request $request){
         $location = $request->input('location');
-        $musicType = $request->input('musictype');
+        $musicType = $request->input('music-type');
 
         if($location->isEmpty() && $musicType->isEmpty()){
 

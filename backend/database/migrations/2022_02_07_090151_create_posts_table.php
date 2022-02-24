@@ -17,12 +17,11 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('title');
-            $table->text('content');
             $table->string('location');
-            $table->string('artists');
             $table->date('start_date')->nullable();
             $table->date('end_date')->nullable();
             $table->string('image');
+            $table->string('genre');
             $table->timestamps();
         });
     }

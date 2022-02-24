@@ -13,7 +13,9 @@ class Post extends Model
         'title',
         'content',
         'location',
-        'artists',
+        'image',
+        'start_date',
+        'end_date'
     ];
 
     public function user() 
