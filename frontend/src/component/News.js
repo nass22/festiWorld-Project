@@ -40,7 +40,7 @@ function News() {
   <Card.Body>
     <Card.Title style={{  textAlign:'start',fontSize:'30px',marginTop:'1rem', fontFamily:'cantarell', fontWeight:'bolder'}}>News Artists announced </Card.Title>
     <Card.Text style={{textAlign:'start', marginTop:'1rem'}}>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book . 
+    This is another news.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book . 
     </Card.Text>
 
   </Card.Body>

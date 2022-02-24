@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "title": "title post 1",
+        "content": "dazdadazddadadazdazd",
+        "location": "Brussels",
+        "artists": "Martin Garrix",
+        "start_date": null,
+        "end_date": null,
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 3,
+        "user_id": 1,
+        "title": "Charleroi Festi",
+        "content": "Festival in Charleroi",
+        "location": "Charleroi",
+        "artists": "Dj LaTaupe",
+        "start_date": null,
+        "end_date": null,
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 4,
+        "user_id": 1,
+        "title": "Festi Lille",
+        "content": "Festival in Lille",
+        "location": "Lille",
+        "artists": "Dj LaCrevette",
+        "start_date": null,
+        "end_date": null,
+        "created_at": null,
+        "updated_at": null
+    },
+    {
+        "id": 5,
+        "user_id": 1,
+        "title": "Festi Knokke",
+        "content": "Festival in Knokke",
+        "location": "Knokke\t",
+        "artists": "Dj Pestouille",
+        "start_date": null,
+        "end_date": null,
+        "created_at": null,
+        "updated_at": null
+    }
+]

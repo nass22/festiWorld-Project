@@ -1,12 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
-import ToggleButton from 'react-bootstrap/ToggleButton';
 import './BootsrapCarousel.css';
 import { Button, Container } from 'react-bootstrap';
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
   
-export default function App() {
+export default function Slide() {
   return (
 
     <Container  fluid  className='container-fluid p-0' style={{p:0}}>
@@ -25,7 +23,7 @@ src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-1.2.1
                        
                         
                     </div>
-          <Button className='a' href="/allevents" variant="dark" style={{width:200, height:40,opacity:'0.90', marginTop:'15px' }}>See All Events</Button>
+          <Button className='a' href="/events" variant="dark" style={{width:200, height:40,opacity:'0.90', marginTop:'15px' }}>See All Events</Button>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={2500}>
@@ -43,7 +41,7 @@ src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1
                        
                         
                     </div>
-            <Button className='a' href="/allevents" variant="dark" style={{width:200, height:40,opacity:'0.90',marginTop:'25px' }}>See All Events</Button>
+            <Button className='a' href="/events" variant="dark" style={{width:200, height:40,opacity:'0.90',marginTop:'25px' }}>See All Events</Button>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

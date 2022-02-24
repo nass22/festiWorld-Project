@@ -1,18 +1,54 @@
-import BottomNavig from '../component/BottomNavig';
-import Header from '../component/Header';
 import React from 'react';
-import { Button, Form } from 'react-bootstrap';
-import '../component/SignIn.css';
-import Checkbox from '@mui/material/Checkbox';
 import { useState } from 'react';
+import axios from "axios";
+import Header from '../component/Header';
+import { useNavigate } from 'react-router-dom';
+import { Form } from 'react-bootstrap';
+import '../component/SignUp.css';
+import Checkbox from '@mui/material/Checkbox';
+import Swal from 'sweetalert'
+
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 
-
-function SignUp() {
-  const [username, setUsername] =useState('');
+function SignIn() {
+  let navigate = useNavigate();
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [data, setData] = useState(null);
+
+
+  //form submission
+  const handleClick = (event) => {
+    navigate('/', { replace: true });
+    setLoading(true);
+    setIsError(false);
+    const data = {
+      email: email,
+      password: password,
+    }
+
+    //call api
+    axios.post('http://festiworldapi.thedarknass.com/api/login', data).then(res => {
+      setData(res.data);
+      setEmail('');
+      setPassword('');
+      setLoading(false);
+    }).catch(err => {
+      setLoading(false);
+      setIsError(true);
+    });
+  }
+
+
+  
+
+
+
+
 
 
   return <div className="body">
@@ -20,31 +56,39 @@ function SignUp() {
     <Form className='form'>
       <h3>Sign In</h3>
 
+
+
       <div className="form-group">
 
-        <input value={username} type="text" className="form-control" placeholder="User Name" onChange={ e => setUsername(e.target.value)} />
+        <input type="email" className="form-control" placeholder="Enter email"
+          id="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)} />
       </div>
 
       <div className="form-group">
 
-        <input value={password} type="password" className="form-control" placeholder="Enter password"  onChange={ e => setPassword(e.target.value)}  />
+        <input type="password" className="form-control" placeholder="Enter password"
+          id="password"
+          value={password}
+          onChange={e => setPassword(e.target.value)} />
       </div>
 
-      <Button  type="submit" className="btn btn-secondary btn-block">Sign In </Button>
 
-      <div style={{ marginTop: '1rem', display:'inline-block' }}>
 
+      {isError && <small className="mt-3 d-inline-block text-danger">Something went wrong. Please try again later.</small>}
+
+      <button type="submit" onClick={() => navigate('./', { replace: true })} className="btn btn-secondary btn-block" onClick={handleClick}
+        disabled={loading}> {loading ? 'Loading...' : 'Sign In'}</button>
+
+      <div style={{ marginTop: '1rem' }}>
         <p> Save password ?  <Checkbox {...label} /> </p>
-        <p className="forgot-password text-right">
-          Don't have an account yet ? <a className='a' href="/signup">Sign Up</a>
-        </p> 
-
+        <p className="forgot-password text-right">Don't have an account? <a className='a' href="/signup">Sign Up</a></p>
       </div>
 
     </Form>
-    <BottomNavig />
 
   </div>;
 }
 
-export default SignUp;
+export default SignIn;

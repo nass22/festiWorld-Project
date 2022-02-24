@@ -18,7 +18,6 @@ import SearchIcon from '@mui/icons-material/Search';
 
 export default function FixedBottomNavigation() {
  
-
   return (
     <Box  sx={{pb: 7 }} >
       <CssBaseline />
@@ -28,7 +27,7 @@ export default function FixedBottomNavigation() {
           showLabels
         >
           <BottomNavigationAction className='a' href="/" style={{ color: 'white' }} label="Home"  icon={<Home  />}  />
-          <BottomNavigationAction  className='a' href="/allevents" label="All Events" style={{ color: 'white' }} icon={<PublicIcon />} />
+          <BottomNavigationAction  className='a' href="/events" label="All Events" style={{ color: 'white' }} icon={<PublicIcon />} />
           <BottomNavigationAction className='a' href="/search" style={{ color: 'white' }} label="Search" icon={<SearchIcon style={{ color: 'white' }}/>} />
         </BottomNavigation>
       </Paper>

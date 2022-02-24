@@ -51,6 +51,9 @@ Route::get('/news', [NewsController::class, 'show']);
 //Add News
 Route::post('/addnews', [NewsController::class, 'store']);
 
+//Test page
+Route::get('/test', [PostController::class, 'getRandomImg']);
+
 
 //using middleware
 // Route::group(['middleware' => ['auth:sanctum']], function () {

@@ -1,0 +1,22 @@
+.mc__form {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-row-gap: 40px;
+    justify-content: stretch;
+    align-items: center;
+    transition: height .2s ease;
+  }
+
+  .mc__form-container {
+    width: 100%;
+    margin: 0 auto;
+    transition: height .2s ease;
+  }
+
+  #mc_embed_signup {
+      background-color: red;
+  }
+
+  
+
+

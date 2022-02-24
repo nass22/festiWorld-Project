@@ -63,4 +63,25 @@ class PostController extends Controller
         }
         
     }
+
+    public function getRandomImg(){
+
+        $url = "https://api.unsplash.com/photos/random/?query=musicfestivals&client_id=3Ls0LURZokLtsjEO-tGCasKHlCx4WuFH3mFOaPr5IFA";
+        $curl = curl_init();
+
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_URL, $url); 
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+            echo "cURL Error #:" . $err;
+        } else {
+            return $response;
+        }
+
+    }
 }
