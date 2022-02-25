@@ -1,0 +1,13 @@
+.news-title {
+    font-family: "orbitron";
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+   
+}
+
+.news {
+    margin-top: 6rem;
+}
+

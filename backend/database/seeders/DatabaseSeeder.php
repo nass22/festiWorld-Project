@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         // \App\Models\Post::factory(3)->create();
-        // \App\Models\News::factory(5)->create();
+         \App\Models\News::factory(5)->create();
 
     }
 }

@@ -1,0 +1,45 @@
+.container-search {
+    background-color: #D3E4FF;
+   
+}
+
+.align-items-center-search {
+    padding: 2rem;
+}
+
+.input-search {
+    border-radius:8px;
+}
+
+.search-menu-title {
+    
+    font-weight: bolder;
+    font-size:40px;
+   
+    margin-top: 2rem;
+    color: black
+}
+
+#border-wrapper{
+    position:relative;
+    display:inline-block;
+}
+#border{
+    position: relative;
+    width: 30%;
+    height: 7px;
+    background-color: #D3E4FF;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.date-picker {
+border-color: lightgray;
+border-radius: 5px;
+border-width: 0.2px;
+   height: 2.4rem;
+}
+
+
+
+

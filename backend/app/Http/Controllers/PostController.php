@@ -3,11 +3,43 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class PostController extends Controller
 {
+    //function fetch
+    public function fetch(){
+        $url='https://app.ticketmaster.com/discovery/v2/events.json?size=10&keyword=festival&dmaId=354&apikey=FPTdwquKq3R9upWz97Sa7WpeFakc2jNl';
+        $session=curl_init();
+
+        curl_setopt($session, CURLOPT_URL, $url);
+        curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+
+
+        $allData= curl_exec($session);
+        curl_close($session);
+
+        $response = json_decode($allData);
+     
+        $obj=$response->_embedded;
+        $size=count($obj->events);
+        
+        for ($i=0; $i < $size; $i++ ){
+            $festival = new Post;
+            $festival->title = $obj->events[$i]->name;
+            $festival->location = $obj->events[$i]->_embedded->venues[0]->state->name;
+            $festival->image = $obj->events[$i]->images[0]->url;
+            $festival->start_date = $obj->events[$i]->dates->start->localDate;
+            $festival->genre = $obj->events[$i]->classifications[0]->genre->name;
+            $festival->save();
+        }
+
+        return Post::all();
+    
+    }
+
     public function showAllPosts(){
         return response()->json(Post::all());
     }
@@ -31,10 +63,6 @@ class PostController extends Controller
         $post = Post::find($id);
         return response()->json($post);
     }
-
-    // public function viewSearch(){
-    //     return view('search');
-    // }
 
     //A modifier
     public function search(Request $request){

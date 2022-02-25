@@ -1,0 +1,12 @@
+.playlist-title {
+    font-family: "orbitron";
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+   
+}
+
+.playlist {
+    margin-top: 7rem;
+}

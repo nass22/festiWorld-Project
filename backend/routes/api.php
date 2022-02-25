@@ -52,7 +52,7 @@ Route::get('/news', [NewsController::class, 'show']);
 Route::post('/addnews', [NewsController::class, 'store']);
 
 //Test page
-Route::get('/test', [PostController::class, 'getRandomImg']);
+Route::get('/test', [PostController::class, 'fetch']);
 
 
 //using middleware
