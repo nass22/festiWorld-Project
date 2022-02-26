@@ -45,11 +45,17 @@ Route::get('/festivals/{id}', [PostController::class, 'showPost']);
 //Search festivals
 Route::post('/festivals/search', [PostController::class, 'search']);
 
+//fetch festivals
+Route::get('/festivals/fetch', [PostController::class, 'fetchFestivals']);
+
 //List all News
 Route::get('/news', [NewsController::class, 'show']);
 
 //Add News
 Route::post('/addnews', [NewsController::class, 'store']);
+
+//fetch news
+Route::get('/news/fetch', [NewsController::class, 'fetchNews']);
 
 //Test page
 Route::get('/test', [PostController::class, 'fetch']);

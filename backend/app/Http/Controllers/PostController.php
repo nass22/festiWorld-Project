@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Http;
 
 class PostController extends Controller
 {
-    //function fetch
-    public function fetch(){
+    //function fetch festivals ticketmaster
+    public function fetchFestivals(){
         $url='https://app.ticketmaster.com/discovery/v2/events.json?size=10&keyword=festival&dmaId=354&apikey=FPTdwquKq3R9upWz97Sa7WpeFakc2jNl';
         $session=curl_init();
 
