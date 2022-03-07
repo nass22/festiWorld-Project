@@ -132,6 +132,7 @@ For our training at BeCode, we had to create a site that lists different music f
 ## Authors
 
 [Onur Gizem](https://github.com/GizemOnur) : Front-end
+
 [Nacer Samir](https://github.com/nass22) : Back-end (API with laravel)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
